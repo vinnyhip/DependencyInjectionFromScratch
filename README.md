@@ -51,4 +51,16 @@ encapsulate the network construction somehow.
 ### Problems
 
 * We want to have the ability to access __every__ service in the network, not just one.
+
+## DI Stage 5: Encapsulating the Context
+
+### Improvements
+
+* We now can easily pull out any service instances from the context by calling `getServiceInstance`
+* The services itself can access each other simply by declaring a field of the proper type
+* The services don't even have to know about the `DIContext` object.
+
+### Problems
+
+* We need a way to __tell our algorithm__ which fields we want it to set and which ones to leave alone.  
   
