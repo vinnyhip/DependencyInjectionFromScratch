@@ -19,6 +19,10 @@ public class DIContext {
 
         for(Object serviceInstance : this.serviceInstances) {
             for(Field field : serviceInstance.getClass().getDeclaredFields()) {
+                if(!field.isAnnotationPresent(Inject.class)) {
+                    continue;
+                }
+
                 Class<?> fieldType = field.getType();
                 field.setAccessible(true);
 

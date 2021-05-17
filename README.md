@@ -63,4 +63,14 @@ encapsulate the network construction somehow.
 ### Problems
 
 * We need a way to __tell our algorithm__ which fields we want it to set and which ones to leave alone.  
-  
+
+## DI Stage 6: Annotating fields
+
+### Improvements
+
+* Now the __algorithm knows__ which fields it needs to assign 
+
+### Problems
+
+* How we can actually discover our service classes?
+
