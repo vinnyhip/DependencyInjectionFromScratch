@@ -33,4 +33,12 @@ object, potentially even of another subclass.
 * your will encounter __cycles__ in your service dependencies which cannot be resolved using constructors as shown in
 our example.
   
+## DI Stage 3: Breaking the cycle with setters
 
+* Doing the wiring part manually is error prone. You might forget to call a setter and then it's `NullPonterException`
+galore.
+* You might accidentally use a service instance that is still under construction, so it would be beneficial to
+encapsulate the network construction somehow.
+  
+
+  
