@@ -1,6 +1,6 @@
 public class ServiceB {
 
-    public static String jobB() {
+    public String jobB() {
         return "jobB()";
     }
 }

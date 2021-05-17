@@ -1,6 +1,10 @@
 public class Main {
 
     public static void main(String args[]) {
-        System.out.println(ServiceA.jobA());
+
+        ServiceB serviceB = new ServiceB();
+        ServiceA serviceA = new ServiceA(serviceB);
+
+        System.out.println(serviceA.jobA());
     }
 }
