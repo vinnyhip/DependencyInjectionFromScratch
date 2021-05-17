@@ -40,5 +40,15 @@ galore.
 * You might accidentally use a service instance that is still under construction, so it would be beneficial to
 encapsulate the network construction somehow.
   
+## DI Stage 4: Automating the wiring
 
+### Improvements
+
+* Service get wired together automatically.
+* We can no longer forget to call a setter (in fact, we don't need them anymore).
+* Our application will fail __on startup__ if the wiring fails, not during the business logic.
+
+### Problems
+
+* We want to have the ability to access __every__ service in the network, not just one.
   
