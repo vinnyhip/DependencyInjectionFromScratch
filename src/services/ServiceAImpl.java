@@ -1,8 +1,9 @@
-public class ServiceA {
+package services;
 
+public class ServiceAImpl implements ServiceA {
     private ServiceB serviceB;
 
-    public ServiceA(ServiceB serviceB) {
+    public ServiceAImpl(ServiceB serviceB) {
         this.serviceB = serviceB;
     }
 
