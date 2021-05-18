@@ -74,3 +74,7 @@ encapsulate the network construction somehow.
 
 * How we can actually discover our service classes?
 
+## DI Stage 7: Auto-detecting Services
+
+* Our classpath scanner will detect all classes and decide if they are services or not.
+
