@@ -1,9 +1,8 @@
-import services.*;
+package main;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.util.HashSet;
-import java.util.Set;
+import main.services.DIContext;
+import main.services.ServiceA;
+import main.services.ServiceB;
 
 public class Main {
 
@@ -13,10 +12,8 @@ public class Main {
     }
 
     private static DIContext createContext() throws Exception {
-        Set<Class<?>> serviceClasses = new HashSet<>();
-        serviceClasses.add(ServiceAImpl.class);
-        serviceClasses.add(ServiceBImpl.class);
-        return new DIContext(serviceClasses);
+        String rootPackageName = Main.class.getPackage().getName();
+        return DIContext.createContextForPackage(rootPackageName);
     }
 
     private static void doBusinessLogic(DIContext context) {

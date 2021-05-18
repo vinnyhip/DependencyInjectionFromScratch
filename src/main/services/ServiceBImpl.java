@@ -1,5 +1,6 @@
-package services;
+package main.services;
 
+@Service
 public class ServiceBImpl implements ServiceB {
 
     @Inject

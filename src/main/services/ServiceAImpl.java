@@ -1,5 +1,6 @@
-package services;
+package main.services;
 
+@Service
 public class ServiceAImpl implements ServiceA {
 
     @Inject

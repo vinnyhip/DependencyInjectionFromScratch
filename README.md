@@ -6,10 +6,10 @@ Baby steps in Java for understanding Dependency Injection.
 
 ## DI Stage 0: Basic example
 
-* Code is very poor in terms of OO principles. services.ServiceA and services.ServiceB should, at the very least, be
+* Code is very poor in terms of OO principles. main.services.ServiceA and main.services.ServiceB should, at the very least, be
 objects.
 * The code is tightly coupled and very hard to test in isolation.
-* We have absolutely no chance of swapping neither services.ServiceA nor services.ServiceB with a different
+* We have absolutely no chance of swapping neither main.services.ServiceA nor main.services.ServiceB with a different
 implementation. Imagine one of them is doing credit card billings; you **don't** want that to actually happen in your 
 test suite.
   
@@ -17,9 +17,9 @@ test suite.
 
 ### Improvements
 
-* We can now replace the implementation of `services.ServiceB` which is used by `services.ServiceA` by providing another 
+* We can now replace the implementation of `main.services.ServiceB` which is used by `main.services.ServiceA` by providing another 
 object, potentially even of another subclass.
-* We can test both services in isolation with a proper test mock for services.ServiceA
+* We can test both main.services in isolation with a proper test mock for main.services.ServiceA
 
 ### Problems
 
@@ -57,8 +57,8 @@ encapsulate the network construction somehow.
 ### Improvements
 
 * We now can easily pull out any service instances from the context by calling `getServiceInstance`
-* The services itself can access each other simply by declaring a field of the proper type
-* The services don't even have to know about the `DIContext` object.
+* The main.services itself can access each other simply by declaring a field of the proper type
+* The main.services don't even have to know about the `DIContext` object.
 
 ### Problems
 
